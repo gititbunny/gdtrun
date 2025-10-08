@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: #0f0f0f;
+  background: #ffffff;
+  letter-spacing: 0.2px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #f0f0f0;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-dot {
+  width: 12px;
+  height: 12px;
+  background: #6b7cff;
+  border-radius: 50%;
+}
+.brand-name {
+  font-weight: 800;
+  font-size: 18px;
+}
+.brand-sub {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.nav a {
+  margin-left: 18px;
+  font-weight: 600;
+}
+.nav a:hover {
+  opacity: 0.7;
+}
+
+.hero {
+  padding: 80px 20px 40px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #f8f9ff 0%, #ffffff 60%);
+}
+.hero h1 {
+  font-size: 40px;
+  margin: 0 0 12px 0;
+}
+.hero p {
+  font-size: 16px;
+  margin: 0 auto 20px auto;
+  max-width: 760px;
+  opacity: 0.9;
+}
+.hero-actions {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: #111111;
+  color: #ffffff;
+  font-weight: 700;
+  border: 1px solid #111111;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+.btn-secondary {
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid #e8e8e8;
+}
+
+.work {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.work-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-btn {
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+.filter-btn.active {
+  background: #111111;
+  color: #fff;
+  border-color: #111111;
+}
+.search input {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  min-width: 240px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 14px;
+}
+.card {
+  position: relative;
+  border: 1px solid #f0f0f0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  background: #fafafa;
+}
+.card-body {
+  padding: 12px;
+}
+.card-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 0 6px 0;
+}
+.card-sub {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tag {
+  font-size: 12px;
+  padding: 6px 10px;
+  border: 1px solid #eeeeee;
+  border-radius: 999px;
+  background: #fcfcfc;
+}
+
+.span-4 {
+  grid-column: span 4;
+}
+.span-6 {
+  grid-column: span 6;
+}
+.span-8 {
+  grid-column: span 8;
+}
+
+@media (max-width: 1024px) {
+  .span-8 {
+    grid-column: span 6;
+  }
+}
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .span-8,
+  .span-6 {
+    grid-column: span 6;
+  }
+  .span-4 {
+    grid-column: span 6;
+  }
+}
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .span-8,
+  .span-6,
+  .span-4 {
+    grid-column: span 2;
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+
+.about {
+  padding: 40px 20px;
+  background: #fafbff;
+}
+.about-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 20px;
+}
+.about-card h2 {
+  margin-top: 0;
+}
+.about-list {
+  margin: 12px 0 0 0;
+  padding: 0 0 0 16px;
+}
+
+.contact {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.contact h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.contact-form {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 20px;
+}
+.form-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  font-size: 14px;
+}
+.form-row input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.site-footer {
+  padding: 18px 20px;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 40px;
+  background: #fff;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.footer-inner .links a {
+  margin-left: 12px;
+  opacity: 0.85;
+}
+.footer-inner .links a:hover {
+  opacity: 1;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+}
+.modal.show {
+  display: block;
+}
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.modal-dialog {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+.modal-image {
+  width: 60%;
+  height: 480px;
+  object-fit: cover;
+  background: #fafafa;
+}
+.modal-body {
+  width: 40%;
+  padding: 18px;
+}
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 28px;
+  background: #fff;
+  border: 1px solid #eee;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 30px;
+}
+.modal-cta {
+  margin-top: 14px;
+}
+
+@media (max-width: 900px) {
+  .modal-dialog {
+    margin: 20px;
+  }
+  .modal-image,
+  .modal-body {
+    width: 100%;
+  }
+  .modal-image {
+    height: 280px;
+  }
+}
