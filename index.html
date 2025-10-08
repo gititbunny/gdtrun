@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nina Nkhwashu — Graphic Design Portfolio</title>
+    <meta
+      name="description"
+      content="Graphic design portfolio by Nina Nkhwashu — logos, posters, social media, brand systems, and visual campaigns."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo-dot"></div>
+        <a href="#" class="brand-name">Nina Nkhwashu</a>
+        <span class="brand-sub">Graphic Designer</span>
+      </div>
+
+      <nav class="nav">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Graphic design that moves people.</h1>
+      <p>
+        Logos, posters, social campaigns, and brand systems crafted with clarity
+        and emotion.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#work">View Work</a>
+        <a class="btn btn-secondary" href="#contact">Hire Me</a>
+      </div>
+    </section>
+
+    <section id="work" class="work">
+      <div class="work-controls">
+        <div class="filters" id="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="Logo">Logos</button>
+          <button class="filter-btn" data-filter="Poster">Posters</button>
+          <button class="filter-btn" data-filter="Social">Social</button>
+          <button class="filter-btn" data-filter="Branding">Branding</button>
+          <button class="filter-btn" data-filter="UI/Visual">UI/Visual</button>
+        </div>
+        <div class="search">
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search projects..."
+          />
+        </div>
+      </div>
+
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-card">
+        <h2>About</h2>
+        <p>
+          I’m Nina, a graphic designer and creative technologist. I design
+          clear, memorable visuals— from identity systems and posters to social
+          campaigns and product visuals. My approach blends aesthetics,
+          strategy, and usability so your brand not only looks good—it works.
+        </p>
+        <ul class="about-list">
+          <li>Identity & Logos</li>
+          <li>Posters & Campaigns</li>
+          <li>Social Media Design</li>
+          <li>Brand Systems & Guidelines</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <form
+        action="https://formsubmit.co/ninankhwashu@gmail.com"
+        method="POST"
+        class="contact-form"
+      >
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input
+          type="hidden"
+          name="_subject"
+          value="New design inquiry from portfolio"
+        />
+        <div class="form-row">
+          <input name="name" type="text" placeholder="Your name" required />
+          <input name="email" type="email" placeholder="Your email" required />
+        </div>
+        <input name="company" type="text" placeholder="Company (optional)" />
+        <textarea
+          name="message"
+          rows="6"
+          placeholder="Tell me about the project..."
+          required
+        ></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>© <span id="year"></span> Nina Nkhwashu</span>
+        <div class="links">
+          <a
+            href="https://github.com/gititbunny"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/ninankhwashu"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            href="https://ninankhwashu.netlify.app"
+            target="_blank"
+            rel="noreferrer"
+            >Portfolio</a
+          >
+          <a
+            href="https://linktr.ee/ninankhwashu"
+            target="_blank"
+            rel="noreferrer"
+            >Linktree</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close></div>
+      <div
+        class="modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button class="modal-close" data-close aria-label="Close">×</button>
+        <img id="modalImage" src="" alt="" class="modal-image" />
+        <div class="modal-body">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDesc"></p>
+          <div id="modalTags" class="tag-row"></div>
+          <div class="modal-cta">
+            <a
+              id="modalLink"
+              class="btn btn-secondary"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              >View full case</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
